@@ -1,8 +1,12 @@
 import 'dotenv/config'
 import Fastify from 'fastify'
+import cors from '@fastify/cors'
 import trainRoutes from './routes/trains.js'
 
 const fastify = Fastify({ logger: true })
+
+// Tillåt Cors / anrop från frontend port 5173
+fastify.register(cors, { origin: 'http://localhost:5173' })
 
 // registrera train routes
 fastify.register(trainRoutes, { prefix: '/api' })

@@ -1,7 +1,7 @@
 import type { b } from "vue-router/dist/index-D_VEAp3P.js";
 
 // URL for the backend API
-const API_URL = 'http://localhost:8080/api/api';
+const API_URL = 'http://localhost:3000/api';
 
 export interface Location {
     LocationName: string
